@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranic Healing Portal — Study & Practice Portal</title>
+    <meta name="description" content="Discover the ancient science of energy healing. Explore courses in Basic, Advanced, and Psychotherapy levels. Join the study portal today.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS RESET & COLOR PALETTE VARIABLES */
+        :root {
+            --color-bg: #faf7f2;
+            --color-primary: #3b1f6e;
+            --color-primary-light: #522d99;
+            --color-primary-dark: #241147;
+            --color-accent: #c9a84c;
+            --color-accent-hover: #b5943b;
+            --color-text: #2d1f45;
+            --color-text-muted: #5e4f75;
+            --color-card-bg: #ffffff;
+            --color-white: #ffffff;
+            --color-error: #cc3333;
+            --color-border: rgba(59, 31, 110, 0.08);
+            --color-glass: rgba(250, 247, 242, 0.85);
+            
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            
+            --shadow-subtle: 0 4px 20px rgba(59, 31, 110, 0.04);
+            --shadow-card: 0 10px 30px rgba(59, 31, 110, 0.06);
+            --shadow-hover: 0 15px 40px rgba(199, 168, 76, 0.15);
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            color: var(--color-primary);
+            line-height: 1.25;
+        }
+
+        p {
+            font-weight: 400;
+            color: var(--color-text-muted);
+        }
+
+        /* CONTAINER & LAYOUT */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-padding {
+            padding: 7.5rem 0;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin: 0 auto 4.5rem auto;
+            text-align: center;
+        }
+
+        .section-header .subtitle {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        .section-header h2 {
+            font-size: 2.85rem;
+            margin-bottom: 1rem;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.9rem 2.2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-radius: 50px;
+            border: 1.5px solid transparent;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: 0 4px 15px rgba(59, 31, 110, 0.15);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 31, 110, 0.25);
+        }
+
+        .btn-accent {
+            background-color: var(--color-accent);
+            color: var(--color-primary-dark);
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(199, 168, 76, 0.15);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(199, 168, 76, 0.25);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1.5px solid var(--color-accent);
+            color: var(--color-primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-accent);
+            color: var(--color-primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* LOTUS DIVIDER */
+        .divider-lotus {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            color: var(--color-accent);
+            opacity: 0.85;
+        }
+
+        .divider-lotus::before,
+        .divider-lotus::after {
+            content: '';
+            height: 1px;
+            width: 60px;
+            background: linear-gradient(to right, transparent, var(--color-accent), transparent);
+            margin: 0 1rem;
+        }
+
+        .lotus-icon {
+            width: 36px;
+            height: 36px;
+            fill: currentColor;
+            display: inline-block;
+        }
+
+        /* 1. NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--color-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(199, 168, 76, 0.12);
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-subtle);
+            background-color: rgba(250, 247, 242, 0.96);
+            border-bottom: 1px solid rgba(199, 168, 76, 0.2);
+            padding: 0.35rem 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled .container {
+            height: 65px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--font-serif);
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .logo-text {
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.25rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--color-primary);
+            position: relative;
+            padding: 0.4rem 0;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--color-accent-hover);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1010;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: var(--transition-smooth);
+            transform-origin: left center;
+        }
+
+        /* 2. HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, #1c0e35 100%);
+            color: var(--color-white);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 80% 30%, rgba(199, 168, 76, 0.08) 0%, transparent 60%);
+            z-index: 1;
+        }
+
+        .hero-bg-mandala {
+            position: absolute;
+            right: -10%;
+            top: 10%;
+            width: 55%;
+            height: auto;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+            animation: slow-rotate 140s linear infinite;
+        }
+
+        @keyframes slow-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-text {
+            font-size: 1.25rem;
+            color: rgba(250, 247, 242, 0.8);
+            margin-bottom: 2.75rem;
+            font-weight: 300;
+        }
+
+        /* 3. ABOUT THE FOUNDER */
+        .founder {
+            background-color: var(--color-bg);
+            position: relative;
+        }
+
+        .founder-wrapper {
+            display: grid;
+            grid-template-columns: 1.1fr 1.9fr;
+            gap: 4.5rem;
+            align-items: center;
+        }
+
+        .founder-avatar-container {
+            position: relative;
+            border-radius: 20px;
+            padding: 15px;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .founder-avatar-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 1px dashed var(--color-accent);
+            border-radius: 28px;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+
+        .founder-silhouette {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            display: block;
+        }
+
+        .founder-info h3 {
+            font-size: 2.35rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-label {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 1.75rem;
+            display: block;
+        }
+
+        .founder-bio {
+            font-size: 1.15rem;
+            line-height: 1.75;
+            margin-bottom: 2.25rem;
+            color: var(--color-text-muted);
+            font-weight: 300;
+        }
+
+        /* 4. GUIDED PRACTICE WIDGET (BREATHING SECTION) */
+        .breathing-section {
+            background-color: var(--color-white);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .breathing-card {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: var(--color-bg);
+            border-radius: 24px;
+            padding: 3.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--color-border);
+        }
+
+        .breathing-container {
+            width: 220px;
+            height: 220px;
+            margin: 2.5rem auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .breathing-circle-outer {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(59, 31, 110, 0.03);
+            border: 2px dashed rgba(199, 168, 76, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .breathing-circle-inner {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            box-shadow: 0 0 25px rgba(59, 31, 110, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-size: 1.15rem;
+            font-weight: 600;
+            z-index: 2;
+            transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 1s ease;
+        }
+
+        .breathing-circle-inner.glow-inhale {
+            box-shadow: 0 0 45px rgba(59, 31, 110, 0.65);
+        }
+
+        .breathing-circle-inner.glow-exhale {
+            box-shadow: 0 0 45px rgba(199, 168, 76, 0.65);
+            background: radial-gradient(circle, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+            color: var(--color-primary-dark);
+        }
+
+        .breathing-circle-inner.glow-hold {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+        }
+
+        .breathing-text {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            height: 38px;
+            margin-top: 1rem;
+        }
+
+        .breathing-timer {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: var(--font-sans);
+            color: var(--color-primary);
+            margin: 0.5rem 0;
+        }
+
+        .breathing-controls {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+        }
+
+        .breathing-instruction {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-top: 1.75rem;
+        }
+
+        /* 5. COURSES OVERVIEW */
+        .courses {
+            background-color: var(--color-bg);
+            position: relative;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .course-card {
+            background-color: var(--color-card-bg);
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            border: 1.5px solid transparent;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-accent);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .course-icon-container {
+            width: 60px;
+            height: 60px;
+            background: rgba(59, 31, 110, 0.05);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            font-size: 1.75rem;
+            margin-bottom: 1.75rem;
+            transition: var(--transition-smooth);
+        }
+
+        .course-card:hover .course-icon-container {
+            background-color: var(--color-primary);
+            color: var(--color-accent);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .course-name {
+            font-size: 1.55rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .course-desc {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .course-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-accent-hover);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            margin-top: auto;
+        }
+
+        .course-link svg {
+            transition: var(--transition-smooth);
+            width: 16px;
+            height: 16px;
+        }
+
+        .course-card:hover .course-link svg {
+            transform: translateX(4px);
+        }
+
+        /* 6. MEET THE INSTRUCTORS */
+        .trainers {
+            background-color: var(--color-white);
+        }
+
+        .trainers-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+        }
+
+        .trainer-card {
+            background-color: var(--color-bg);
+            border-radius: 24px;
+            padding: 3.5rem;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trainer-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+        }
+
+        .trainer-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .trainer-header {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .instructor-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .trainer-info h3 {
+            font-size: 1.85rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .trainer-subtitle {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-accent-hover);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .trainer-experience {
+            font-size: 0.85rem;
+            background-color: rgba(59, 31, 110, 0.06);
+            color: var(--color-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .trainer-bio {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: var(--color-text-muted);
+        }
+
+        /* 7. STUDENT PORTAL (GATED) */
+        .portal {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, #1c0e35 100%);
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 80%, rgba(199, 168, 76, 0.06) 0%, transparent 60%);
+            z-index: 1;
+        }
+
+        .portal .section-header h2 {
+            color: var(--color-white);
+        }
+
+        .portal-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .portal-lock-container {
+            margin-bottom: 2rem;
+        }
+
+        .portal-lock-circle {
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(199, 168, 76, 0.25);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+            box-shadow: 0 0 25px rgba(199, 168, 76, 0.05);
+            animation: pulse-glow 3.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(199, 168, 76, 0.05); }
+            50% { box-shadow: 0 0 35px rgba(199, 168, 76, 0.2); }
+        }
+
+        .portal-lock-circle svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .portal-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 3.5rem 0;
+        }
+
+        .portal-video-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .portal-video-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(199, 168, 76, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .portal-video-thumb {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.35);
+            position: relative;
+        }
+
+        .portal-video-thumb::after {
+            content: 'Gated';
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background-color: var(--color-accent);
+            color: var(--color-primary-dark);
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .portal-video-card:hover .portal-video-thumb {
+            color: var(--color-accent);
+        }
+
+        .portal-video-card h4 {
+            color: var(--color-white);
+            font-size: 1.15rem;
+            margin-bottom: 0.25rem;
+            font-family: var(--font-sans);
+            font-weight: 500;
+        }
+
+        .portal-video-card p {
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 0.85rem;
+        }
+
+        .portal-cta {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(199, 168, 76, 0.25);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-top: 2.5rem;
+        }
+
+        .portal-cta p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* 8. REGISTER SECTION */
+        .register-section {
+            background-color: var(--color-bg);
+            position: relative;
+        }
+
+        .register-card {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: var(--color-card-bg);
+            border-radius: 24px;
+            padding: 3.5rem;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--color-border);
+        }
+
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            position: relative;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.9rem 1.25rem;
+            font-size: 0.95rem;
+            font-family: var(--font-sans);
+            background-color: var(--color-bg);
+            border: 1.5px solid transparent;
+            border-radius: 8px;
+            color: var(--color-text);
+            outline: none;
+            transition: var(--transition-smooth);
+        }
+
+        .form-input:focus {
+            border-color: var(--color-accent);
+            background-color: var(--color-white);
+            box-shadow: 0 0 10px rgba(199, 168, 76, 0.15);
+        }
+
+        .form-input.invalid {
+            border-color: var(--color-error);
+            box-shadow: 0 0 10px rgba(204, 51, 51, 0.1);
+        }
+
+        .error-message {
+            font-size: 0.8rem;
+            color: var(--color-error);
+            font-weight: 500;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        /* 9. SUCCESS MODAL */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(36, 17, 71, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+
+        .modal.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background-color: var(--color-bg);
+            border-radius: 24px;
+            width: 90%;
+            max-width: 480px;
+            padding: 3.5rem 3rem;
+            box-shadow: var(--shadow-hover);
+            border: 2px solid var(--color-accent);
+            text-align: center;
+            transform: scale(0.9);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .modal.open .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--color-border);
+        }
+
+        .modal-close:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .modal-icon-container {
+            width: 70px;
+            height: 70px;
+            background: rgba(199, 168, 76, 0.1);
+            color: var(--color-accent);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.75rem;
+        }
+
+        .modal-icon-container svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .modal h3 {
+            font-size: 2.15rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .modal p {
+            font-size: 1rem;
+            margin-bottom: 2.25rem;
+        }
+
+        /* 10. FOOTER */
+        .footer {
+            background-color: var(--color-primary-dark);
+            color: rgba(250, 247, 242, 0.7);
+            padding: 5rem 0 2.5rem 0;
+            border-top: 1px solid rgba(199, 168, 76, 0.15);
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 3.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer .logo {
+            color: var(--color-white);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            font-size: 0.95rem;
+            color: rgba(250, 247, 242, 0.75);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-nav a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* SCROLL ANIMATIONS */
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+
+        .fade-in-on-scroll.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* RESPONSIVE DESIGN (MOBILE-FIRST) */
+        @media (max-width: 991px) {
+            html {
+                font-size: 15px;
+            }
+
+            .section-padding {
+                padding: 5.5rem 0;
+            }
+
+            .hero-title {
+                font-size: 3.25rem;
+            }
+
+            .founder-wrapper {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .founder-avatar-container {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .courses-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .trainers-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .portal-preview-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar .container {
+                height: 70px;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--color-bg);
+                flex-direction: column;
+                justify-content: center;
+                gap: 3rem;
+                transition: var(--transition-smooth);
+                z-index: 999;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            /* Hamburger animation */
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+
+            .hero {
+                text-align: center;
+                padding-top: 70px;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trainer-card {
+                padding: 2.5rem 2rem;
+            }
+
+            .trainer-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo" aria-label="Go to homepage">
+                <svg class="lotus-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                    <path d="M50 20 C46 35, 46 45, 50 50 C54 45, 54 35, 50 20 Z" fill="currentColor" opacity="0.9"/>
+                    <path d="M50 50 C42 42, 32 30, 36 22 C40 22, 46 38, 50 50 Z" fill="currentColor" opacity="0.8"/>
+                    <path d="M50 50 C58 42, 68 30, 64 22 C60 22, 54 38, 50 50 Z" fill="currentColor" opacity="0.8"/>
+                    <path d="M50 50 C38 48, 22 42, 22 34 C26 30, 38 42, 50 50 Z" fill="currentColor" opacity="0.7"/>
+                    <path d="M50 50 C62 48, 78 42, 78 34 C74 30, 62 42, 50 50 Z" fill="currentColor" opacity="0.7"/>
+                    <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4"/>
+                </svg>
+                <div class="logo-text">
+                    Pranic Healing
+                    <span>Portal</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#breathing" class="nav-link">Practice</a></li>
+                    <li><a href="#courses" class="nav-link">Courses</a></li>
+                    <li><a href="#trainers" class="nav-link">Trainers</a></li>
+                    <li><a href="#portal" class="nav-link">Portal</a></li>
+                </ul>
+            </nav>
+
+            <a href="#register" class="btn btn-primary" style="padding: 0.7rem 1.6rem; font-size: 0.9rem; display: none;" id="nav-cta-btn">Get Access</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero" id="home">
+        <!-- Background Mandala Pattern -->
+        <svg class="hero-bg-mandala" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="95" stroke="#c9a84c" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.2"/>
+            <circle cx="100" cy="100" r="80" stroke="#c9a84c" stroke-width="0.75" opacity="0.15"/>
+            <circle cx="100" cy="100" r="60" stroke="#c9a84c" stroke-width="0.75" stroke-dasharray="4 4" opacity="0.25"/>
+            <path d="M100 5 C80 35, 80 65, 100 100 C120 65, 120 35, 100 5 Z" stroke="#c9a84c" stroke-width="0.75" opacity="0.15"/>
+            <path d="M100 195 C80 165, 80 135, 100 100 C120 135, 120 165, 100 195 Z" stroke="#c9a84c" stroke-width="0.75" opacity="0.15"/>
+            <path d="M5 100 C35 80, 65 80, 100 100 C65 120, 35 120, 5 100 Z" stroke="#c9a84c" stroke-width="0.75" opacity="0.15"/>
+            <path d="M195 100 C165 80, 135 80, 100 100 C135 120, 165 120, 195 100 Z" stroke="#c9a84c" stroke-width="0.75" opacity="0.15"/>
+            <path d="M33 33 C60 50, 80 70, 100 100 C70 80, 50 60, 33 33 Z" stroke="#c9a84c" stroke-width="0.75" opacity="0.15"/>
+            <path d="M167 167 C140 150, 120 130, 100 100 C130 120, 150 140, 167 167 Z" stroke="#c9a84c" stroke-width="0.75" opacity="0.15"/>
+            <path d="M33 167 C60 150, 80 130, 100 100 C70 120, 50 140, 33 167 Z" stroke="#c9a84c" stroke-width="0.75" opacity="0.15"/>
+            <path d="M167 33 C140 50, 120 70, 100 100 C130 80, 150 60, 167 33 Z" stroke="#c9a84c" stroke-width="0.75" opacity="0.15"/>
+        </svg>
+
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle fade-in-on-scroll">Energy Healing Science</span>
+                <h1 class="hero-title fade-in-on-scroll delay-100">Heal. Transform. Evolve.</h1>
+                <p class="hero-text fade-in-on-scroll delay-200">Discover the ancient science of energy healing — a proven system to improve health, relationships, and inner peace.</p>
+                <div class="fade-in-on-scroll delay-300">
+                    <a href="#register" class="btn btn-accent">Get Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ABOUT THE FOUNDER -->
+    <section class="founder section-padding" id="about">
+        <div class="container">
+            <div class="founder-wrapper">
+                <div class="founder-avatar-container fade-in-on-scroll">
+                    <!-- Stylized SVG silhouette avatar -->
+                    <svg class="founder-silhouette" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="46" fill="#3b1f6e" stroke="#c9a84c" stroke-width="2.5"/>
+                        <circle cx="50" cy="50" r="38" stroke="#c9a84c" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.6"/>
+                        <circle cx="50" cy="40" r="16" fill="#faf7f2" stroke="#c9a84c" stroke-width="2"/>
+                        <path d="M22 78 C22 62, 34 54, 50 54 C66 54, 78 62, 78 78 Z" fill="#faf7f2" stroke="#c9a84c" stroke-width="2"/>
+                        <path d="M50 8 L50 16 M50 84 L50 92 M8 50 L16 50 M84 50 L92 50" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+                    </svg>
+                </div>
+                <div class="founder-info fade-in-on-scroll delay-200">
+                    <span class="founder-label">The Science of Pranic Healing</span>
+                    <h3>Structured Spiritual Practice</h3>
+                    <div class="divider-lotus" style="justify-content: flex-start; margin: 1.5rem 0;">
+                        <svg class="lotus-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 25px; height: 25px;">
+                            <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                            <path d="M50 20 C46 35, 46 45, 50 50 C54 45, 54 35, 50 20 Z" fill="currentColor"/>
+                            <path d="M50 50 C42 42, 32 30, 36 22 C40 22, 46 38, 50 50 Z" fill="currentColor"/>
+                            <path d="M50 50 C58 42, 68 30, 64 22 C60 22, 54 38, 50 50 Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <p class="founder-bio">
+                        Pranic Healing was rediscovered and systematized as a modern science in the late 20th century. Drawing from ancient esoteric traditions across cultures, it introduced a structured, teachable approach to energy-based healing — one that has since spread to over 120 countries and transformed millions of lives.
+                    </p>
+                    <a href="#courses" class="btn btn-primary">Explore Our Courses</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. GUIDED PRACTICE WIDGET -->
+    <section class="breathing-section section-padding" id="breathing">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Guided Practice</span>
+                <h2>Daily Breathing Guide</h2>
+                <div class="divider-lotus">
+                    <svg class="lotus-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px;">
+                        <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                        <path d="M50 20 C46 35, 46 45, 50 50 C54 45, 54 35, 50 20 Z" fill="currentColor"/>
+                        <path d="M50 50 C42 42, 32 30, 36 22 C40 22, 46 38, 50 50 Z" fill="currentColor"/>
+                        <path d="M50 50 C58 42, 68 30, 64 22 C60 22, 54 38, 50 50 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Stabilize your energetic systems and bring focus to your mind using our 6-3-6-3 breathing cadence. Click below to begin your practice cycle.</p>
+            </div>
+
+            <div class="breathing-card fade-in-on-scroll">
+                <div class="breathing-container">
+                    <div class="breathing-circle-outer" id="breathing-outer"></div>
+                    <div class="breathing-circle-inner" id="breathing-inner">
+                        <span id="breathing-inner-text">Begin</span>
+                    </div>
+                </div>
+                <div class="breathing-text" id="breathing-state">Ready when you are</div>
+                <div class="breathing-timer" id="breathing-timer">0s</div>
+                <div class="breathing-controls">
+                    <button class="btn btn-primary" id="btn-breathing-start">Start Meditation</button>
+                    <button class="btn btn-outline" id="btn-breathing-reset" disabled>Reset</button>
+                </div>
+                <p class="breathing-instruction">Rhythm: Inhale (6s) &rarr; Hold (3s) &rarr; Exhale (6s) &rarr; Hold (3s). Feel your personal field expand.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. COURSES OVERVIEW -->
+    <section class="courses section-padding" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Syllabus</span>
+                <h2>Our Courses</h2>
+                <div class="divider-lotus">
+                    <svg class="lotus-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px;">
+                        <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                        <path d="M50 20 C46 35, 46 45, 50 50 C54 45, 54 35, 50 20 Z" fill="currentColor"/>
+                        <path d="M50 50 C42 42, 32 30, 36 22 C40 22, 46 38, 50 50 Z" fill="currentColor"/>
+                        <path d="M50 50 C58 42, 68 30, 64 22 C60 22, 54 38, 50 50 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Begin a structured course curriculum to master the mechanisms of spiritual energy work, healing protocols, and character development.</p>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card fade-in-on-scroll">
+                    <div class="course-icon-container">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z"/></svg>
+                    </div>
+                    <h3 class="course-name">Basic Pranic Healing</h3>
+                    <p class="course-desc">Learn the foundational techniques of scanning, cleansing, and energizing the human energy field.</p>
+                    <a href="#register" class="course-link">
+                        Get Started
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card fade-in-on-scroll delay-100">
+                    <div class="course-icon-container">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <h3 class="course-name">Advanced Pranic Healing</h3>
+                    <p class="course-desc">Master colour prana and advanced healing protocols for accelerated results.</p>
+                    <a href="#register" class="course-link">
+                        Get Started
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card fade-in-on-scroll delay-200">
+                    <div class="course-icon-container">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                    </div>
+                    <h3 class="course-name">Pranic Psychotherapy</h3>
+                    <p class="course-desc">Apply energy healing to emotional and psychological conditions for lasting inner peace.</p>
+                    <a href="#register" class="course-link">
+                        Get Started
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card fade-in-on-scroll">
+                    <div class="course-icon-container">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h3 class="course-name">Forgiveness & Peace</h3>
+                    <p class="course-desc">Release emotional blockages and cultivate compassion through powerful energetic techniques.</p>
+                    <a href="#register" class="course-link">
+                        Get Started
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card fade-in-on-scroll delay-100">
+                    <div class="course-icon-container">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3 class="course-name">Achieving Oneness</h3>
+                    <p class="course-desc">Deepen your spiritual practice and align with your Higher Self through meditation and inner work.</p>
+                    <a href="#register" class="course-link">
+                        Get Started
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card fade-in-on-scroll delay-200">
+                    <div class="course-icon-container">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="course-name">Arhatic Yoga</h3>
+                    <p class="course-desc">An advanced system integrating meditation, ethics, and energy practices for accelerated spiritual evolution.</p>
+                    <a href="#register" class="course-link">
+                        Get Started
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. MEET THE TRAINERS -->
+    <section class="trainers section-padding" id="trainers">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Facilitators</span>
+                <h2>Your Instructors</h2>
+                <div class="divider-lotus">
+                    <svg class="lotus-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px;">
+                        <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                        <path d="M50 20 C46 35, 46 45, 50 50 C54 45, 54 35, 50 20 Z" fill="currentColor"/>
+                        <path d="M50 50 C42 42, 32 30, 36 22 C40 22, 46 38, 50 50 Z" fill="currentColor"/>
+                        <path d="M50 50 C58 42, 68 30, 64 22 C60 22, 54 38, 50 50 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Learn direct validation techniques and protocols from certified course instructors dedicated to systematic wellness instruction.</p>
+            </div>
+
+            <div class="trainers-wrapper">
+                <!-- Trainer 1 -->
+                <div class="trainer-card fade-in-on-scroll">
+                    <div class="trainer-header">
+                        <!-- Custom SVG avatar (abstract geometric shape) -->
+                        <svg class="instructor-avatar" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="48" fill="#3b1f6e" stroke="#c9a84c" stroke-width="2"/>
+                            <path d="M50 25 C35 25, 30 40, 30 55 C30 70, 40 80, 50 80 C60 80, 70 70, 70 55 C70 40, 65 25, 50 25 Z" fill="#faf7f2" opacity="0.15"/>
+                            <circle cx="50" cy="42" r="14" stroke="#c9a84c" stroke-width="1.5"/>
+                            <path d="M28 78 C28 66, 38 58, 50 58 C62 58, 72 66, 72 78" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="50" cy="50" r="32" stroke="#c9a84c" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.5"/>
+                        </svg>
+                        <div class="trainer-info">
+                            <span class="trainer-subtitle">Senior Instructor</span>
+                            <h3>Faculty Associate</h3>
+                            <span class="trainer-experience">15+ Years Instruction</span>
+                        </div>
+                    </div>
+                    <p class="trainer-bio">
+                        Certified Pranic Healer & Course Instructor with over 15 years of experience in energy healing, life coaching, and corporate wellness programs. Dedicated to making training frameworks clear and actionable.
+                    </p>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div class="trainer-card fade-in-on-scroll delay-200">
+                    <div class="trainer-header">
+                        <!-- Custom SVG avatar (abstract geometric shape) -->
+                        <svg class="instructor-avatar" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="48" fill="#3b1f6e" stroke="#c9a84c" stroke-width="2"/>
+                            <path d="M50 20 L50 80 M20 50 L80 50" stroke="#c9a84c" stroke-width="0.5" stroke-dasharray="1 3" opacity="0.6"/>
+                            <polygon points="50,15 85,50 50,85 15,50" stroke="#c9a84c" stroke-width="0.75" opacity="0.4"/>
+                            <circle cx="50" cy="40" r="12" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+                            <path d="M30 75 C30 65, 38 60, 50 60 C62 60, 70 65, 70 75" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <div class="trainer-info">
+                            <span class="trainer-subtitle">Lead Instructor</span>
+                            <h3>Core Practitioner</h3>
+                            <span class="trainer-experience">Advanced Curriculum</span>
+                        </div>
+                    </div>
+                    <p class="trainer-bio">
+                        Certified Pranic Healer & Course Instructor with expertise in Basic and Advanced levels. Passionate about making Pranic Healing accessible to every household for daily wellness integration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. STUDENT PORTAL (GATED) -->
+    <section class="portal section-padding" id="portal">
+        <div class="container">
+            <div class="portal-wrapper">
+                <div class="portal-lock-container fade-in-on-scroll">
+                    <div class="portal-lock-circle">
+                        <!-- Inline SVG Lock Icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <span class="subtitle" style="color: var(--color-accent);">Student Area</span>
+                    <h2>Student Practice Portal</h2>
+                    <p style="color: rgba(255, 255, 255, 0.75);">An exclusive video library for registered students — review healing techniques, deepen your understanding, and integrate energy healing into your everyday life.</p>
+                </div>
+
+                <div class="portal-preview-grid">
+                    <!-- Locked Video 1 -->
+                    <div class="portal-video-card fade-in-on-scroll btn-portal-gate">
+                        <div class="portal-video-thumb">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        </div>
+                        <div>
+                            <h4>Technique Review</h4>
+                            <p>Verification steps for basic aura cleansing and scans.</p>
+                        </div>
+                    </div>
+
+                    <!-- Locked Video 2 -->
+                    <div class="portal-video-card fade-in-on-scroll delay-100 btn-portal-gate">
+                        <div class="portal-video-thumb">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        </div>
+                        <div>
+                            <h4>Chakra Integration</h4>
+                            <p>Rhythms and alignment guidelines for active meditation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Locked Video 3 -->
+                    <div class="portal-video-card fade-in-on-scroll delay-200 btn-portal-gate">
+                        <div class="portal-video-thumb">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        </div>
+                        <div>
+                            <h4>Self-Hygiene Rhythms</h4>
+                            <p>Daily shielding procedures and energetic maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portal-cta fade-in-on-scroll">
+                    <p>To request access to the student dashboard, submit your registration information below.</p>
+                    <a href="#register" class="btn btn-accent">Register for Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. REGISTER SECTION -->
+    <section class="register-section section-padding" id="register">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Enrollment</span>
+                <h2>Begin Your Journey</h2>
+                <div class="divider-lotus">
+                    <svg class="lotus-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px;">
+                        <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                        <path d="M50 20 C46 35, 46 45, 50 50 C54 45, 54 35, 50 20 Z" fill="currentColor"/>
+                        <path d="M50 50 C42 42, 32 30, 36 22 C40 22, 46 38, 50 50 Z" fill="currentColor"/>
+                        <path d="M50 50 C58 42, 68 30, 64 22 C60 22, 54 38, 50 50 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p>Register your details below to request access to the student materials or enroll in our upcoming training cohorts.</p>
+            </div>
+
+            <div class="register-card fade-in-on-scroll">
+                <form class="register-form" id="register-form" novalidate>
+                    <!-- Name Input -->
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" class="form-input" placeholder="e.g. Alex Johnson" required minlength="2">
+                        <div class="error-message" id="error-name">Please enter your name (at least 2 characters).</div>
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="register-email">Email Address</label>
+                        <input type="email" id="register-email" class="form-input" placeholder="e.g. alex@example.com" required>
+                        <div class="error-message" id="error-email">Please enter a valid email address.</div>
+                    </div>
+
+                    <!-- Course Dropdown -->
+                    <div class="form-group">
+                        <label for="register-course">Course Interest</label>
+                        <select id="register-course" class="form-input" style="appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 fill=%22%233b1f6e%22><polygon points=%220,3 12,3 6,9%22/></svg>'); background-repeat: no-repeat; background-position: calc(100% - 20px) center; padding-right: 40px;" required>
+                            <option value="" disabled selected>Select a course</option>
+                            <option value="basic">Basic Pranic Healing</option>
+                            <option value="advanced">Advanced Pranic Healing</option>
+                            <option value="psychotherapy">Pranic Psychotherapy</option>
+                            <option value="forgiveness">Forgiveness & Peace</option>
+                            <option value="oneness">Achieving Oneness</option>
+                            <option value="arhatic">Arhatic Yoga</option>
+                        </select>
+                        <div class="error-message" id="error-course">Please select a course program from the list.</div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-accent" style="width: 100%; border: none;">Request Access</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. SUCCESS MODAL -->
+    <div class="modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-icon-container">
+                <!-- Checkmark SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h3 id="modal-title">Request Received</h3>
+            <p>Thank you for your interest. Our team will reach out to you shortly.</p>
+            <button class="btn btn-primary" id="modal-ok-btn" style="width: 100%;">Close</button>
+        </div>
+    </div>
+
+    <!-- 10. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <a href="#home" class="logo">
+                    <svg class="lotus-icon" viewBox="0 0 100 100" style="color: var(--color-accent);">
+                        <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                        <path d="M50 20 C46 35, 46 45, 50 50 C54 45, 54 35, 50 20 Z" fill="currentColor"/>
+                        <path d="M50 50 C42 42, 32 30, 36 22 C40 22, 46 38, 50 50 Z" fill="currentColor"/>
+                        <path d="M50 50 C58 42, 68 30, 64 22 C60 22, 54 38, 50 50 Z" fill="currentColor"/>
+                    </svg>
+                    <div class="logo-text" style="color: var(--color-white)">
+                        Pranic Healing
+                        <span style="color: var(--color-accent)">Portal</span>
+                    </div>
+                </a>
+                <ul class="footer-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#breathing">Practice</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="#portal">Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pranic Healing Portal. All rights reserved.</p>
+                <p style="color: rgba(250, 247, 242, 0.45);">Generic Professional Demo Portal</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Mobile Menu Drawer Controls
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close navbar drawer on clicking link (Mobile layout)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // 2. Navbar Scroll and Sticky Logic
+        const navbar = document.getElementById('navbar');
+        const navCtaBtn = document.getElementById('nav-cta-btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+                navCtaBtn.style.display = 'inline-flex';
+            } else {
+                navbar.classList.remove('scrolled');
+                navCtaBtn.style.display = 'none';
+            }
+        });
+
+        // 3. Scrollspy: Highlight Active Nav Link
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // 4. Viewport-Triggered Animations (Intersection Observer)
+        const animElements = document.querySelectorAll('.fade-in-on-scroll');
+        const animObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        animElements.forEach(element => {
+            animObserver.observe(element);
+        });
+
+        // 5. Breathing Cycle Engine (6-3-6-3 Cadence)
+        const breathingInner = document.getElementById('breathing-inner');
+        const breathingInnerText = document.getElementById('breathing-inner-text');
+        const breathingState = document.getElementById('breathing-state');
+        const breathingTimer = document.getElementById('breathing-timer');
+        const btnBreatheStart = document.getElementById('btn-breathing-start');
+        const btnBreatheReset = document.getElementById('btn-breathing-reset');
+
+        let breathingInterval = null;
+        let isBreathingActive = false;
+        let counter = 0;
+        let phase = 'idle';
+
+        const breathingPhases = {
+            inhale: { text: 'Inhale Energy', duration: 6, scale: 2.0, glow: 'glow-inhale' },
+            hold1: { text: 'Hold & Circulate', duration: 3, scale: 2.0, glow: 'glow-hold' },
+            exhale: { text: 'Exhale Impurities', duration: 6, scale: 1.0, glow: 'glow-exhale' },
+            hold2: { text: 'Hold & Ground', duration: 3, scale: 1.0, glow: 'glow-hold' }
+        };
+
+        function startBreathing() {
+            if (isBreathingActive) {
+                // Pause State
+                clearInterval(breathingInterval);
+                isBreathingActive = false;
+                btnBreatheStart.textContent = 'Resume Practice';
+                breathingInnerText.textContent = 'Paused';
+                breathingState.textContent = 'Breathing cycle paused';
+            } else {
+                // Active State
+                isBreathingActive = true;
+                btnBreatheStart.textContent = 'Pause Practice';
+                btnBreatheReset.removeAttribute('disabled');
+
+                if (phase === 'idle') {
+                    triggerPhase('inhale');
+                } else {
+                    runBreathingTimer();
+                }
+            }
+        }
+
+        function resetBreathing() {
+            clearInterval(breathingInterval);
+            isBreathingActive = false;
+            counter = 0;
+            phase = 'idle';
+
+            breathingInner.style.transform = 'scale(1)';
+            breathingInner.className = 'breathing-circle-inner';
+            breathingInnerText.textContent = 'Begin';
+            breathingState.textContent = 'Ready when you are';
+            breathingTimer.textContent = '0s';
+
+            btnBreatheStart.textContent = 'Start Meditation';
+            btnBreatheReset.setAttribute('disabled', 'true');
+        }
+
+        function triggerPhase(nextPhase) {
+            phase = nextPhase;
+            counter = breathingPhases[phase].duration;
+            breathingState.textContent = breathingPhases[phase].text;
+            breathingTimer.textContent = `${counter}s`;
+
+            // Expand or contract circle scale
+            breathingInner.style.transform = `scale(${breathingPhases[phase].scale})`;
+
+            // Transition glow classes
+            breathingInner.className = 'breathing-circle-inner';
+            breathingInner.classList.add(breathingPhases[phase].glow);
+
+            runBreathingTimer();
+        }
+
+        function runBreathingTimer() {
+            clearInterval(breathingInterval);
+            breathingInterval = setInterval(() => {
+                counter--;
+                breathingTimer.textContent = `${counter}s`;
+                breathingInnerText.textContent = counter;
+
+                if (counter <= 0) {
+                    clearInterval(breathingInterval);
+                    // Cycle progression logic
+                    if (phase === 'inhale') {
+                        triggerPhase('hold1');
+                    } else if (phase === 'hold1') {
+                        triggerPhase('exhale');
+                    } else if (phase === 'exhale') {
+                        triggerPhase('hold2');
+                    } else if (phase === 'hold2') {
+                        triggerPhase('inhale');
+                    }
+                }
+            }, 1000);
+        }
+
+        btnBreatheStart.addEventListener('click', startBreathing);
+        btnBreatheReset.addEventListener('click', resetBreathing);
+
+        // 6. Gated Video Cards & Scrolls to Register
+        document.querySelectorAll('.btn-portal-gate').forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+                // Highlight Name field
+                setTimeout(() => {
+                    document.getElementById('register-name').focus();
+                }, 800);
+            });
+        });
+
+        // 7. Registration Form & Success Modal Logic
+        const form = document.getElementById('register-form');
+        const modal = document.getElementById('success-modal');
+        const closeBtn = document.getElementById('modal-close-btn');
+        const okBtn = document.getElementById('modal-ok-btn');
+
+        const inputName = document.getElementById('register-name');
+        const inputEmail = document.getElementById('register-email');
+        const inputCourse = document.getElementById('register-course');
+
+        const errName = document.getElementById('error-name');
+        const errEmail = document.getElementById('error-email');
+        const errCourse = document.getElementById('error-course');
+
+        // Regex helper for validating email addresses
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function openModal() {
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let hasErrors = false;
+
+            // Reset UI states
+            inputName.classList.remove('invalid');
+            inputEmail.classList.remove('invalid');
+            inputCourse.classList.remove('invalid');
+            errName.style.display = 'none';
+            errEmail.style.display = 'none';
+            errCourse.style.display = 'none';
+
+            // Validate Name
+            if (inputName.value.trim().length < 2) {
+                inputName.classList.add('invalid');
+                errName.style.display = 'block';
+                hasErrors = true;
+            }
+
+            // Validate Email
+            if (!isValidEmail(inputEmail.value.trim())) {
+                inputEmail.classList.add('invalid');
+                errEmail.style.display = 'block';
+                hasErrors = true;
+            }
+
+            // Validate Course
+            if (inputCourse.value === '') {
+                inputCourse.classList.add('invalid');
+                errCourse.style.display = 'block';
+                hasErrors = true;
+            }
+
+            if (!hasErrors) {
+                // Success: Open Modal and Reset Form
+                openModal();
+                form.reset();
+            }
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+        okBtn.addEventListener('click', closeModal);
+
+        // Dismiss modal by clicking backdrop
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Dismiss modal using Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) {
+                closeModal();
+            }
+        });
+
+        // Form fields change-events: Clear error on typing
+        inputName.addEventListener('input', () => {
+            if (inputName.value.trim().length >= 2) {
+                inputName.classList.remove('invalid');
+                errName.style.display = 'none';
+            }
+        });
+
+        inputEmail.addEventListener('input', () => {
+            if (isValidEmail(inputEmail.value.trim())) {
+                inputEmail.classList.remove('invalid');
+                errEmail.style.display = 'none';
+            }
+        });
+
+        inputCourse.addEventListener('change', () => {
+            if (inputCourse.value !== '') {
+                inputCourse.classList.remove('invalid');
+                errCourse.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
