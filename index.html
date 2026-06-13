@@ -1929,47 +1929,7 @@
         btnBreatheStart.addEventListener('click', startBreathing);
         btnBreatheReset.addEventListener('click', resetBreathing);
 
-        // 6. Gated Video Cards & Scrolls to Register
-        document.querySelectorAll('.btn-portal-gate').forEach(card => {
-            card.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
-                // Highlight Name field
-                setTimeout(() => {
-                    document.getElementById('register-name').focus();
-                }, 800);
-            });
-        });
 
-        // 7. Registration Form & Success Modal Logic
-        const form = document.getElementById('register-form');
-        const modal = document.getElementById('success-modal');
-        const closeBtn = document.getElementById('modal-close-btn');
-        const okBtn = document.getElementById('modal-ok-btn');
-
-        const inputName = document.getElementById('register-name');
-        const inputEmail = document.getElementById('register-email');
-        const inputCourse = document.getElementById('register-course');
-
-        const errName = document.getElementById('error-name');
-        const errEmail = document.getElementById('error-email');
-        const errCourse = document.getElementById('error-course');
-
-        // Regex helper for validating email addresses
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-
-        function openModal() {
-            modal.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            modal.classList.remove('open');
-            document.body.style.overflow = '';
-        }
 
         // 7. Gated Video Click Interception / Video Lightbox Launch
         const videoModal = document.getElementById('video-modal');
